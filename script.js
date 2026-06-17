@@ -142,7 +142,6 @@ const projectData = {
                     <img src="images/organizer_gui.png">
                 </div>
             </div>
-    
             <div class="system-section">
                 <div class="section-flex invert">
                     <div class="section-text">
@@ -216,7 +215,6 @@ function openProject(id) {
     const body = document.getElementById("modal-body");
     const pathName = document.querySelector(".current-file");
     
-    // Populate Modal Content - Repo link added at the very end
     body.innerHTML = `
         <h2>${project.title}</h2>
         <div class="tech-spec">${project.spec}</div>
@@ -224,27 +222,17 @@ function openProject(id) {
         <a href="${project.repo}" target="_blank" class="link-btn">OPEN_REPOSITORY</a>
     `;
     
-    // Update Modal Navigation Breadcrumb
     if (pathName) {
         pathName.innerHTML = ` ${id.toUpperCase()}.sys`;
     }
     
-    // Show Modal
     modal.style.display = "block";
-    document.body.style.overflow = "hidden"; // Prevent background scroll
+    document.body.style.overflow = "hidden"; 
 }
 
 function closeProject() {
     document.getElementById("project-modal").style.display = "none";
-    document.body.style.overflow = "auto"; // Re-enable scroll
-}
-
-// Close modal when clicking outside content
-window.onclick = function(event) {
-    const modal = document.getElementById("project-modal");
-    if (event.target == modal) {
-        closeProject();
-    }
+    document.body.style.overflow = "auto"; 
 }
 
 // 3. TYPING EFFECT LOGIC
@@ -260,46 +248,46 @@ function handleTyping() {
     }
 }
 
-// 4. INITIALIZE ON LOAD (Part 1)
-window.onload = function() {
-    handleTyping();
-};
-
 // 4. IMAGE INSPECTOR LOGIC (LIGHTBOX)
-// Create the lightbox element in JavaScript
 const lightbox = document.createElement('div');
 lightbox.classList.add('lightbox');
 document.body.appendChild(lightbox);
 const lightboxImg = document.createElement('img');
 lightbox.appendChild(lightboxImg);
 
-// Update the lightbox click logic to ensure it resets properly
+// Event Delegation for image clicks in modal
 document.getElementById('modal-body').addEventListener('click', function(e) {
     if (e.target.tagName === 'IMG') {
         lightboxImg.src = e.target.src;
         lightbox.style.display = 'flex';
-        // Prevent background from scrolling while looking at image
         document.body.style.overflow = 'hidden';
     }
 });
 
 lightbox.onclick = function() {
     lightbox.style.display = 'none';
-    // Only re-enable scroll if the main project modal is ALSO closed
     if (document.getElementById('project-modal').style.display === 'none') {
         document.body.style.overflow = 'auto';
     }
 }
 
-// 5. INITIALIZE ON LOAD (Part 2)
+// 5. GLOBAL INITIALIZATION
 window.onload = function() {
     handleTyping();
+};
+
+// Global Click listener for closing modal
+window.onclick = function(event) {
+    const modal = document.getElementById("project-modal");
+    if (event.target == modal) {
+        closeProject();
+    }
 }
-// 6. KEYBOARD LOGIC: Close modal on Escape key press
+
+// Global Key listener for Escape key
 window.addEventListener('keydown', function(event) {
     if (event.key === 'Escape') {
         closeProject();
-        // Also close the lightbox if it's open
         lightbox.style.display = 'none';
     }
 });

@@ -1,6 +1,6 @@
 /* ==========================================================================
-1. GLOBAL SETTINGS
-========================================================================== */
+   1. GLOBAL SETTINGS & THEME
+   ========================================================================== */
 :root {
     --bg-color: #020617;
     --accent: #10b981;
@@ -17,6 +17,11 @@
     font-family: 'Segoe UI', sans-serif;
 }
 
+::selection {
+    background: var(--accent);
+    color: #020617;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -26,9 +31,33 @@ body {
     color: var(--text-main);
     line-height: 1.6;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Technical Grid Background */
+    background-image: 
+        linear-gradient(rgba(16, 185, 129, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(16, 185, 129, 0.02) 1px, transparent 1px);
+    background-size: 30px 30px;
 }
 
-/* NAVIGATION */
+/* Custom Terminal Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #020617; 
+}
+::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent);
+}
+
+/* ==========================================================================
+   2. NAVIGATION
+   ========================================================================== */
 nav {
     display: flex;
     justify-content: space-between;
@@ -68,63 +97,10 @@ nav ul li a {
 nav ul li a:hover {
     color: var(--accent);
 }
+
 /* ==========================================================================
-   HERO BUTTONS REFINEMENT
+   3. HERO SECTION
    ========================================================================== */
-
-.hero-btns {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    margin-top: 40px;
-    flex-wrap: wrap;
-}
-
-/* Base style for all buttons */
-.btn-main, 
-.btn-outline {
-    padding: 12px 28px;
-    font-family: 'Courier New', monospace;
-    font-size: 0.85rem;
-    font-weight: bold;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    min-width: 160px;
-    text-decoration: none; /* Keeps links from having underlines */
-}
-
-/* The primary "Access" button */
-.btn-main {
-    background: var(--accent);
-    color: #020617;
-    border: 1px solid var(--accent);
-    box-shadow: 0 0 10px rgba(16, 185, 129, 0.2);
-}
-
-.btn-main:hover {
-    background: #0ea371;
-    box-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
-    transform: translateY(-3px);
-}
-
-/* The "System Info" and "Tech Stack" buttons */
-.btn-outline {
-    background: transparent;
-    color: var(--text-main);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.btn-outline:hover {
-    border-color: var(--accent);
-    color: var(--accent);
-    background: rgba(16, 185, 129, 0.05);
-    transform: translateY(-3px);
-    box-shadow: 0 0 15px rgba(16, 185, 129, 0.2);
-}
-/* HERO SECTION */
 .hero {
     height: 100vh;
     display: flex;
@@ -164,6 +140,18 @@ nav ul li a:hover {
     min-height: 24px;
 }
 
+.typing-text::after {
+    content: "|";
+    margin-left: 5px;
+    color: var(--accent);
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
 .hero-description {
     max-width: 650px;
     margin-bottom: 35px;
@@ -172,36 +160,67 @@ nav ul li a:hover {
 
 .hero-btns {
     display: flex;
-    gap: 15px;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 40px;
+    flex-wrap: wrap;
 }
 
 .btn-main, .btn-outline {
-    padding: 14px 30px;
-    text-decoration: none;
-    font-weight: bold;
+    padding: 12px 28px;
+    font-family: 'Courier New', monospace;
     font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
     border-radius: 4px;
-    transition: 0.3s;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    min-width: 160px;
+    text-decoration: none;
 }
 
 .btn-main {
     background: var(--accent);
-    color: #000;
-}
-
-.btn-outline {
-    border: 1px solid #334155;
-    color: var(--text-main);
+    color: #020617;
+    border: 1px solid var(--accent);
+    box-shadow: 0 0 10px rgba(16, 185, 129, 0.2);
 }
 
 .btn-main:hover {
-    box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
-    transform: translateY(-2px);
+    background: #0ea371;
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
+    transform: translateY(-3px);
 }
 
-/* PROJECTS GRID */
+.btn-outline {
+    background: transparent;
+    color: var(--text-main);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-outline:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: rgba(16, 185, 129, 0.05);
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.2);
+}
+
+/* ==========================================================================
+   4. PROJECTS GRID
+   ========================================================================== */
 #projects {
     padding: 100px 10%;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+section {
+    animation: fadeInUp 1s ease-out forwards;
 }
 
 .section-title {
@@ -216,15 +235,20 @@ nav ul li a:hover {
 }
 
 .project-card {
-    
-    background: var(--card-bg);
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(10px);
     border: 1px solid var(--border-color);
     border-radius: 4px;
     transition: 0.3s;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    
+}
+
+.project-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.2); 
 }
 
 .project-viewport {
@@ -242,6 +266,11 @@ nav ul li a:hover {
     filter: grayscale(100%);
     transition: 0.5s;
     opacity: 0.7;
+}
+
+.project-card:hover .project-viewport img {
+    filter: grayscale(0%);
+    opacity: 1;
 }
 
 .project-header {
@@ -284,24 +313,14 @@ nav ul li a:hover {
     transition: 0.3s;
 }
 
-.project-card:hover {
-    border-color: var(--accent);
-    transform: translateY(-5px);
-}
-
-.project-card:hover .project-viewport img {
-    filter: grayscale(0%);
-    opacity: 1;
-}
-
 .link-btn:hover {
     background: var(--accent);
     color: #000;
 }
 
 /* ==========================================================================
-2. SYSTEM MODAL (TERMINAL DESIGN)
-========================================================================== */
+   5. SYSTEM MODAL & LIGHTBOX
+   ========================================================================== */
 .modal {
     display: none;
     position: fixed;
@@ -339,12 +358,8 @@ nav ul li a:hover {
 }
 
 @keyframes pulse {
-    0%, 100% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0.5;
-    }
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
 }
 
 .close-btn {
@@ -384,7 +399,6 @@ nav ul li a:hover {
     font-size: 0.8rem;
 }
 
-/* ALTERNATING SECTIONS */
 .system-section {
     margin-bottom: 70px;
     border-left: 2px solid var(--accent);
@@ -402,7 +416,6 @@ nav ul li a:hover {
     flex-direction: row-reverse;
 }
 
-/* IMAGE AND TEXT SIZING */
 .section-text {
     flex: 1.8;
 }
@@ -456,7 +469,6 @@ nav ul li a:hover {
     transform: scale(1.02);
 }
 
-/* LIGHTBOX */
 .lightbox {
     display: none;
     position: fixed;
@@ -492,7 +504,9 @@ nav ul li a:hover {
     opacity: 0.7;
 }
 
-/* SKILLS & FOOTER */
+/* ==========================================================================
+   6. SKILLS & FOOTER
+   ========================================================================== */
 #skills {
     padding: 80px 10%;
     text-align: center;
@@ -512,6 +526,15 @@ nav ul li a:hover {
     padding: 20px;
     border-radius: 8px;
     width: 200px;
+    transition: all 0.3s ease; 
+    cursor: default;
+}
+
+.skill-item:hover {
+    border-color: var(--accent);
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.15); 
+    background: rgba(16, 185, 129, 0.02);
 }
 
 .progress-container {
@@ -527,30 +550,29 @@ nav ul li a:hover {
     height: 100%;
     background: var(--accent);
     box-shadow: 0 0 10px var(--accent);
+    transition: 0.3s;
+}
+
+.skill-item:hover .progress-bar {
+    box-shadow: 0 0 12px var(--accent);
+    filter: brightness(1.2);
 }
 
 footer {
     text-align: center;
     padding: 60px;
     border-top: 1px solid var(--border-color);
-    color: var(--text-dim);
-    font-size: 0.8rem;
-}
-
-@media (max-width: 850px) {
-    .section-flex, .section-flex.invert {
-        flex-direction: column;
-    }
-    
-    .system-section img {
-        max-width: 100%;
-    }
 }
 
 .footer-content {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.footer-content p {
+    color: var(--text-dim);
+    font-size: 0.8rem;
 }
 
 .source-manifest {
@@ -563,6 +585,7 @@ footer {
     border: 1px solid rgba(16, 185, 129, 0.2);
     padding: 10px 20px;
     border-radius: 4px;
+    margin-top: 15px;
 }
 
 .source-manifest:hover {
@@ -571,96 +594,11 @@ footer {
     border-color: var(--accent);
 }
 
-.project-card:hover {
-    border-color: var(--accent);
-    transform: translateY(-5px);
-    /* This adds the neon terminal glow */
-    box-shadow: 0 0 20px rgba(16, 185, 129, 0.2); 
-}
-
-/* Custom Scrollbar for Chrome, Edge, and Safari */
-::-webkit-scrollbar {
-    width: 8px;
-}
-::-webkit-scrollbar-track {
-    background: #020617; 
-}
-::-webkit-scrollbar-thumb {
-    background: #1e293b;
-    border-radius: 10px;
-}
-::-webkit-scrollbar-thumb:hover {
-    background: var(--accent); /* Turns green when you grab it */
-}
-
-body {
-    background-color: var(--bg-color);
-    /* This creates a very subtle technical grid */
-    background-image: 
-        linear-gradient(rgba(16, 185, 129, 0.02) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(16, 185, 129, 0.02) 1px, transparent 1px);
-    background-size: 30px 30px;
-    /* ... keep your other body styles ... */
-}
-
-/* Define the animation */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
+@media (max-width: 850px) {
+    .section-flex, .section-flex.invert {
+        flex-direction: column;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    .system-section img {
+        max-width: 100%;
     }
-}
-
-/* Apply it to your sections */
-section {
-    animation: fadeInUp 1s ease-out forwards;
-}
-
-body {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    /* ... keep your other body styles ... */
-}
-
-.typing-text::after {
-    content: "|";
-    margin-left: 5px;
-    color: var(--accent);
-    animation: blink 1s infinite;
-}
-
-@keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
-}
-
-/* --- Base Skill Item Style --- */
-.skill-item {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    padding: 20px;
-    border-radius: 8px;
-    width: 200px;
-    /* This makes the glow and movement look smooth */
-    transition: all 0.3s ease; 
-    cursor: default;
-}
-
-/* --- The Glow Effect on Hover --- */
-.skill-item:hover {
-    border-color: var(--accent);
-    transform: translateY(-5px);
-    /* Neon glow effect */
-    box-shadow: 0 0 20px rgba(16, 185, 129, 0.15); 
-    background: rgba(16, 185, 129, 0.02);
-}
-
-/* --- Bonus: Make the progress bar glow too --- */
-.skill-item:hover .progress-bar {
-    box-shadow: 0 0 12px var(--accent);
-    filter: brightness(1.2);
 }

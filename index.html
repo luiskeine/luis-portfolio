@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luis | System-Building Data Scientist</title>
+    <!-- Favicon link (Optional) -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,7 +17,6 @@
             <li><a href="#home">Home</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#skills">Skills</a></li>
-            <!-- Clickable Terminal Info -->
             <li><a href="javascript:void(0)" onclick="openProject('archive_system')" style="color: var(--accent);">[ SYSTEM_INFO ]</a></li>
         </ul>
     </nav>
@@ -78,7 +79,6 @@
                     <a href="https://github.com/luiskeine/Smart-File-Organizer.git" target="_blank" class="link-btn">OPEN_REPOSITORY</a>
                 </div>
             </div>
-            
         </div>
     </section>
 
@@ -109,10 +109,10 @@
         </div>
     </section>
 
-<footer>
+    <footer>
         <div class="footer-content">
             <p>© 2024 Luis | Data Science & Intelligent Systems</p>
-            <a href="https://github.com/luiskeine/luis-portfolio" target="_blank" class="source-manifest" style="margin-top: 15px;">
+            <a href="https://github.com/luiskeine/luis-portfolio" target="_blank" class="source-manifest">
                 > VIEW_SOURCE_CODE
             </a>
         </div>
@@ -122,12 +122,10 @@
     <div id="project-modal" class="modal">
         <div class="modal-nav">
             <div class="nav-content">
-                <!-- Left Side: Digital Breadcrumb -->
                 <div class="nav-path">
                     <span class="root">LUIS_DEV /</span>
                     <span class="current-file"> ARCHIVE_01.sys</span>
                 </div>
-                <!-- Right Side: Minimalist Close -->
                 <button class="close-btn" onclick="closeProject()">[ ESC ] CLOSE_FILE</button>
             </div>
         </div>
@@ -136,11 +134,14 @@
         </div>
     </div>
 
+    <!-- Scripts -->
     <script src="script.js"></script>
 
+    <!-- Corner System Identity -->
     <div style="position: fixed; bottom: 20px; left: 20px; font-family: 'Courier New', monospace; font-size: 10px; color: var(--accent); opacity: 0.3; pointer-events: none;">
-    LOC: 14.4845° N, 121.1923° E <br>
-    SYS_STATUS: ACTIVE
-</div>
+        LOC: 14.4845° N, 121.1923° E <br>
+        SYS_STATUS: ACTIVE
+    </div>
+
 </body>
 </html>

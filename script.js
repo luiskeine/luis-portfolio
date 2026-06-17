@@ -1,7 +1,7 @@
 /**
 * ARCHIVE TERMINAL LOGIC
 * Developer: Luis
-* Role: System-Building Data Scientist
+* Role: Computer Science Student | AI & Automation
 */
 
 // 1. PROJECT DATA ARCHIVE
@@ -15,7 +15,7 @@ const projectData = {
                 <div class="section-flex">
                     <div class="section-text">
                         <h3>01_THE_MISSION</h3>
-                        <p>I am Luis, a 3rd-year student specializing in Data Science and Intelligent Systems. I built this terminal to act as a living record of my growth as a developer.</p>
+                        <p>I am Luis, a 3rd-year Computer Science student specializing in AI and Automation. I built this terminal to act as a living record of my technical growth.</p>
                         <p>The goal was to move away from traditional resumes and create an interface that reflects the technical systems I enjoy building.</p>
                     </div>
                 </div>
@@ -24,9 +24,9 @@ const projectData = {
                 <div class="section-flex invert">
                     <div class="section-text">
                         <h3>02_DEVELOPMENT_ETHOS</h3>
-                        <p>This page uses no external libraries or frameworks. It is built with raw HTML, CSS, and JavaScript to prove a fundamental understanding of the web's core architecture.</p>
+                        <p>This page uses no external libraries or frameworks. It is built with raw HTML, CSS, and JavaScript to prove a fundamental understanding of web and software architecture.</p>
                         <ul>
-                            <li><strong>Transparency:</strong> Skill levels reflect my current honest progress.</li>
+                            <li><strong>Transparency:</strong> Project status and skills reflect my honest learning path.</li>
                             <li><strong>Focus:</strong> Every line of code is written to be efficient and authoritative.</li>
                         </ul>
                     </div>
@@ -75,10 +75,6 @@ const projectData = {
                     <div class="section-text">
                         <h3>03_CLIENT_PORTAL_DASHBOARD</h3>
                         <p>The client interface focuses on a seamless user journey. Once logged in, users can view their current active tickets and their specific position in the live queue.</p>
-                        <ul>
-                            <li><strong>State Management:</strong> Dynamically toggles between "Pending" and "Calling" based on Admin actions.</li>
-                            <li><strong>Data Binding:</strong> Directly linked to unique user IDs for personalized tracking.</li>
-                        </ul>
                     </div>
                     <img src="images/customer_display.png">
                 </div>
@@ -87,11 +83,7 @@ const projectData = {
                 <div class="section-flex invert">
                     <div class="section-text">
                         <h3>04_TICKET_GENERATION_LOGIC</h3>
-                        <p>I built an automated ticket assignment system that categorizes requests by service type. This ensures that the consultation flow remains organized and manageable.</p>
-                        <ul>
-                            <li><strong>Unique ID Logic:</strong> Generates formatted ticket strings (e.g., T-827) to prevent duplication.</li>
-                            <li><strong>Service Mapping:</strong> Tickets are categorized into different consultation streams.</li>
-                        </ul>
+                        <p>I built an automated ticket assignment system that categorizes requests by service type. This ensures that the consultation flow remains organized.</p>
                     </div>
                     <img src="images/getting_ticket.png">
                 </div>
@@ -100,11 +92,7 @@ const projectData = {
                 <div class="section-flex">
                     <div class="section-text">
                         <h3>05_ADMIN_CONTROL_HUB</h3>
-                        <p>The operational hub of the system. Admins have a bird's-eye view of all pending cases and can approve, serves, or remove tickets from the active database.</p>
-                        <ul>
-                            <li><strong>CRUD Operations:</strong> Full Create, Read, Update, and Delete capabilities for queue records.</li>
-                            <li><strong>Database Synchronization:</strong> Centralized Singleton pattern manages the MySQL connection.</li>
-                        </ul>
+                        <p>The operational hub. Admins have a bird's-eye view of all pending cases and can approve, serve, or remove tickets from the active database.</p>
                     </div>
                     <img src="images/admin_display.png">
                 </div>
@@ -113,11 +101,7 @@ const projectData = {
                 <div class="section-flex invert">
                     <div class="section-text">
                         <h3>06_AUTOMATED_VOICE_SERVICE</h3>
-                        <p>To improve accessibility, I integrated a voice announcement system. When an Admin "Calls" a ticket, the system announces the ID through the audio output.</p>
-                        <ul>
-                            <li><strong>Multi-threading:</strong> Audio runs on a background thread so the UI never freezes.</li>
-                            <li><strong>System Integration:</strong> Triggers PowerShell TTS (Text-to-Speech) commands directly from Java.</li>
-                        </ul>
+                        <p>To improve accessibility, I integrated a voice announcement system. Multi-threading allows audio to run on a background thread so the UI never freezes.</p>
                     </div>
                     <img src="images/calling_client.png">
                 </div>
@@ -134,10 +118,6 @@ const projectData = {
                     <div class="section-text">
                         <h3>01_PROFESSIONAL_GUI_DESIGN</h3>
                         <p>Transitioning from script-based tools to full applications, I used CustomTkinter to build a modern desktop interface that reflects high-end system utilities.</p>
-                        <ul>
-                            <li><strong>Deep Midnight Blue:</strong> Custom color palette for a professional technical vibe.</li>
-                            <li><strong>Responsive UI:</strong> Layout scales perfectly to different window sizes.</li>
-                        </ul>
                     </div>
                     <img src="images/organizer_gui.png">
                 </div>
@@ -147,10 +127,6 @@ const projectData = {
                     <div class="section-text">
                         <h3>02_STANDALONE_EXE_PACKAGING</h3>
                         <p>One of my main goals was to ship a finished product. I packaged the Python source code into a single, portable executable file for Windows users.</p>
-                        <ul>
-                            <li><strong>Asset Handling:</strong> Engineered a resource_path() function to find icons inside a compressed EXE.</li>
-                            <li><strong>Zero Dependency:</strong> Users can run the tool without having Python installed.</li>
-                        </ul>
                     </div>
                     <img src="images/organizer_exe.png">
                 </div>
@@ -159,11 +135,7 @@ const projectData = {
                 <div class="section-flex">
                     <div class="section-text">
                         <h3>03_UNIVERSAL_PATH_SELECTION</h3>
-                        <p>To make the app "Universal," I implemented a dynamic Browse feature. This allows the system to organize any folder on the computer, not just a hardcoded path.</p>
-                        <ul>
-                            <li><strong>JSON Persistence:</strong> App "remembers" the last folder you used by saving settings to a config file.</li>
-                            <li><strong>Dynamic Pathing:</strong> Uses the pathlib library for cross-platform directory handling.</li>
-                        </ul>
+                        <p>I implemented a dynamic Browse feature. This allows the system to organize any folder on the computer using the pathlib library.</p>
                     </div>
                     <img src="images/organizer_browse.png">
                 </div>
@@ -172,11 +144,7 @@ const projectData = {
                 <div class="section-flex invert">
                     <div class="section-text">
                         <h3>04_TECHNICAL_AUDIT_LOGGING</h3>
-                        <p>Transparency is key in automation. I built a system-level log that records every action taken by the background observer with precise timestamps.</p>
-                        <ul>
-                            <li><strong>Real-time Feedback:</strong> Every file move is displayed in the Matrix-Green console text.</li>
-                            <li><strong>Error Handling:</strong> Catches "File in Use" errors to prevent script crashes.</li>
-                        </ul>
+                        <p>I built a system-level log that records every action taken by the background observer with precise timestamps in a Matrix-Green console.</p>
                     </div>
                     <img src="images/organizer_log.png">
                 </div>
@@ -185,7 +153,7 @@ const projectData = {
                 <div class="section-flex">
                     <div class="section-text">
                         <h3>05_UNORGANIZED_STATE (THE PROBLEM)</h3>
-                        <p>Demonstrating the need for automation. This shows a cluttered Downloads folder where documents, images, and system files are mixed together, making data retrieval slow.</p>
+                        <p>Demonstrating the need for automation. This shows a cluttered folder making data retrieval slow.</p>
                     </div>
                     <img src="images/organizer_before.png">
                 </div>
@@ -194,14 +162,25 @@ const projectData = {
                 <div class="section-flex invert">
                     <div class="section-text">
                         <h3>06_AUTOMATED_CLASSIFICATION (THE SOLUTION)</h3>
-                        <p>The final result of the automation engine. By utilizing <strong>O(1) Dictionary Mapping</strong>, the system instantly identifies extensions and moves them into their respective subfolders.</p>
-                        <ul>
-                            <li><strong>Logic Efficiency:</strong> Replaced slow Switch-cases with high-speed Python Dictionaries.</li>
-                            <li><strong>Watchdog Observer:</strong> Runs in the background, listening for new file drops.</li>
-                        </ul>
+                        <p>By utilizing O(1) Dictionary Mapping, the system instantly identifies extensions and moves them into respective subfolders.</p>
                     </div>
                     <img src="images/organizer_after.png">
                 </div>
+            </div>
+        `
+    },
+    "archive_03": {
+        title: "AI Resume Analyzer (In Development)",
+        spec: "SYSTEM_ID: ARCHIVE_03 // LANGUAGE: PYTHON / FLASK // STATUS: IN_PROGRESS",
+        repo: "#",
+        content: `
+            <div class="system-section">
+                <h3>01_DEVELOPMENT_LOG</h3>
+                <p>Currently architecting a Python-based tool to analyze PDF resumes against job descriptions using Natural Language Processing (NLP).</p>
+                <ul>
+                    <li><strong>Goal:</strong> Automate the HR screening process using AI matching logic.</li>
+                    <li><strong>Current Status:</strong> Parsing engine complete; developing the Flask-based web interface.</li>
+                </ul>
             </div>
         `
     }
@@ -236,7 +215,8 @@ function closeProject() {
 }
 
 // 3. TYPING EFFECT LOGIC
-const typeText = "Data Science // Intelligent Systems // Automation";
+// Updated Branding: Focuses on Software & AI rather than Data Science
+const typeText = "Software Development // AI // Automation";
 let typeIndex = 0;
 
 function handleTyping() {

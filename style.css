@@ -512,22 +512,74 @@ section {
     text-align: center;
 }
 
-.skills-grid {
+.skills-wrapper {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
+    gap: 100px;
     margin-top: 40px;
+    text-align: left;
+}
+
+.column-label {
+    font-family: 'Courier New', monospace;
+    color: var(--accent);
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+.skill-list-new {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-list-new li {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.skill-list-new li .dim {
+    color: var(--text-dim);
+    font-size: 0.85rem;
+    font-family: 'Courier New', monospace;
+    margin-left: 10px;
+}
+
+/* Mobile responsive for skills */
+@media (max-width: 768px) {
+    .skills-wrapper {
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+    }
 }
 
 .skill-item {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    padding: 20px;
-    border-radius: 8px;
-    width: 200px;
-    transition: all 0.3s ease; 
-    cursor: default;
+    width: 100%; /* Make them wider to fit lists */
+    max-width: 450px;
+    text-align: left;
+}
+.skill-category {
+    display: block;
+    font-family: 'Courier New', monospace;
+    color: var(--accent);
+    font-size: 0.75rem;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.skill-list span {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    border: 1px solid rgba(16, 185, 129, 0.1);
 }
 
 .skill-item:hover {

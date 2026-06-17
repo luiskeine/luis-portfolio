@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luis | System-Building Data Scientist</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="logo">LUIS.DEV</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <!-- Clickable Terminal Info -->
+            <li><a href="javascript:void(0)" onclick="openProject('archive_system')" style="color: var(--accent);">[ SYSTEM_INFO ]</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header id="home" class="hero">
+        <div class="content-wrapper">
+            <p class="status-code">[ SYSTEM VERSION 3.0 ]</p>
+            <h1>The Archive Terminal</h1>
+            <h2 class="typing-text"></h2>
+            
+            <p class="hero-description">
+                A custom-architected interface designed to archive my technical evolution.
+                Built to explore the intersection of Data Science and Autonomous Systems.
+            </p>
+            <div class="hero-btns">
+                <a href="#projects" class="btn-main">ACCESS SYSTEMS</a>
+                <a href="#skills" class="btn-outline">TECH STACK</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects">
+        <h3 class="section-title">Technical Projects</h3>
+        
+        <div class="project-grid">
+            <!-- Project 1 (Java) -->
+            <div class="project-card">
+                <div class="project-viewport" onclick="openProject('archive_01')" style="cursor:pointer;">
+                    <img src="images/lobby_display.png" alt="Queue System Preview">
+                </div>
+                <div class="project-header" onclick="openProject('archive_01')" style="cursor:pointer;">
+                    <span class="project-id">[ ARCHIVE_01 ]</span>
+                    <h4>Online Consultation Queue</h4>
+                </div>
+                <div class="card-content">
+                    <p>Advanced Java architecture for real-time queue management. Integrates MySQL for data persistence.</p>
+                    <div class="tags">
+                        <span>Java</span> <span>MySQL</span> <span>Logic</span>
+                    </div>
+                    <a href="https://github.com/luiskeine/OnlineConsultationQueueSystem" target="_blank" class="link-btn">OPEN_REPOSITORY</a>
+                </div>
+            </div>
+
+            <!-- Project 2 (Python) -->
+            <div class="project-card">
+                <div class="project-viewport" onclick="openProject('archive_02')" style="cursor:pointer;">
+                    <img src="images/organizer_gui.png" alt="Smart File Organizer Preview">
+                </div>
+                <div class="project-header" onclick="openProject('archive_02')" style="cursor:pointer;">
+                    <span class="project-id">[ ARCHIVE_02 ]</span>
+                    <h4>Smart File Organizer</h4>
+                </div>
+                <div class="card-content">
+                    <p>Python-based automation system for directory optimization using OS-level logic.</p>
+                    <div class="tags">
+                        <span>Python</span> <span>Automation</span> <span>OS</span>
+                    </div>
+                    <a href="https://github.com/luiskeine/Smart-File-Organizer.git" target="_blank" class="link-btn">OPEN_REPOSITORY</a>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- TECH STACK -->
+    <section id="skills">
+        <h3 class="section-title">The Tech Stack</h3>
+        <div class="skills-grid">
+            <div class="skill-item">
+                <span class="skill-name">Python</span>
+                <div class="progress-container"><div class="progress-bar" style="width: 40%;"></div></div>
+            </div>
+            <div class="skill-item">
+                <span class="skill-name">Java</span>
+                <div class="progress-container"><div class="progress-bar" style="width: 35%;"></div></div>
+            </div>
+            <div class="skill-item">
+                <span class="skill-name">MySQL</span>
+                <div class="progress-container"><div class="progress-bar" style="width: 30%;"></div></div>
+            </div>
+            <div class="skill-item">
+                <span class="skill-name">HTML / CSS</span>
+                <div class="progress-container"><div class="progress-bar" style="width: 45%;"></div></div>
+            </div>
+            <div class="skill-item">
+                <span class="skill-name">JavaScript</span>
+                <div class="progress-container"><div class="progress-bar" style="width: 25%;"></div></div>
+            </div>
+        </div>
+    </section>
+
+<footer>
+        <div class="footer-content">
+            <p>© 2024 Luis | Data Science & Intelligent Systems</p>
+            <a href="https://github.com/luiskeine/luis-portfolio" target="_blank" class="source-manifest" style="margin-top: 15px;">
+                > VIEW_SOURCE_CODE
+            </a>
+        </div>
+    </footer>
+
+    <!-- SYSTEM MODAL (HIDDEN BY DEFAULT) -->
+    <div id="project-modal" class="modal">
+        <div class="modal-nav">
+            <div class="nav-content">
+                <!-- Left Side: Digital Breadcrumb -->
+                <div class="nav-path">
+                    <span class="root">LUIS_DEV /</span>
+                    <span class="current-file"> ARCHIVE_01.sys</span>
+                </div>
+                <!-- Right Side: Minimalist Close -->
+                <button class="close-btn" onclick="closeProject()">[ ESC ] CLOSE_FILE</button>
+            </div>
+        </div>
+        <div class="modal-content">
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

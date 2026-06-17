@@ -567,3 +567,52 @@ footer {
     background: rgba(16, 185, 129, 0.05);
     border-color: var(--accent);
 }
+
+.project-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-5px);
+    /* This adds the neon terminal glow */
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.2); 
+}
+
+/* Custom Scrollbar for Chrome, Edge, and Safari */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #020617; 
+}
+::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent); /* Turns green when you grab it */
+}
+
+body {
+    background-color: var(--bg-color);
+    /* This creates a very subtle technical grid */
+    background-image: 
+        linear-gradient(rgba(16, 185, 129, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(16, 185, 129, 0.02) 1px, transparent 1px);
+    background-size: 30px 30px;
+    /* ... keep your other body styles ... */
+}
+
+/* Define the animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply it to your sections */
+section {
+    animation: fadeInUp 1s ease-out forwards;
+}

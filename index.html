@@ -1,161 +1,317 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luis | System-Building Data Scientist</title>
-    <!-- Favicon link (Optional) -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <!-- NAVIGATION -->
     <nav>
-        <div class="logo">LUIS.DEV</div>
+        <div class="logo">LUIS_TERMINAL</div>
+
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#skills">Skills</a></li>
-            <li><a href="javascript:void(0)" onclick="openProject('archive_system')" style="color: var(--accent);">[ SYSTEM_INFO ]</a></li>
+            <li><a href="#" onclick="openProject('archive_system')">[ SYSTEM_INFO ]</a></li>
         </ul>
     </nav>
 
     <!-- HERO SECTION -->
-    <header id="home" class="hero">
+    <section class="hero" id="home">
         <div class="content-wrapper">
-            <p class="status-code">[ SYSTEM VERSION 3.0 ]</p>
+
+            <span class="status-code">
+                SYSTEM_STATUS: ONLINE // USER: LUIS
+            </span>
+
             <h1>The Archive Terminal</h1>
-            <h2 class="typing-text"></h2>
-            
+
+            <div class="typing-text"></div>
+
             <p class="hero-description">
-                A custom-architected interface designed to archive my technical evolution.
-                Built to explore the intersection of Data Science and Autonomous Systems.
+                A collection of systems, software projects, and technical experiments
+                documenting my journey into software development, AI, and automation.
             </p>
+
             <div class="hero-btns">
-                <a href="#projects" class="btn-main">ACCESS SYSTEMS</a>
-                <a href="#skills" class="btn-outline">TECH STACK</a>
+                <a href="#projects" class="btn-main">EXPLORE_ARCHIVE</a>
+
+                <a href="https://github.com/luiskeine"
+                   target="_blank"
+                   class="btn-outline">
+                    GITHUB_PROFILE
+                </a>
             </div>
+
         </div>
-    </header>
+    </section>
 
-    <!-- PROJECTS SECTION -->
-<!-- PROJECTS SECTION -->
+    <!-- PROJECT ARCHIVE -->
     <section id="projects">
-        <h3 class="section-title">Technical Projects</h3>
-        
+
+        <h2 class="section-title">
+            <span style="color: var(--accent);">></span>
+            PROJECT_ARCHIVE
+        </h2>
+
         <div class="project-grid">
-            <!-- Project 1 (Java) -->
+
+            <!-- ARCHIVE 01 -->
             <div class="project-card">
-                <div class="project-viewport" onclick="openProject('archive_01')" style="cursor:pointer;">
-                    <img src="images/lobby_display.png" alt="Queue System Preview">
+
+                <div class="project-viewport">
+                    <img src="images/lobby_display.png" alt="Online Consultation Queue System">
                 </div>
-                <div class="project-header" onclick="openProject('archive_01')" style="cursor:pointer;">
+
+                <div class="project-header"
+                     onclick="openProject('archive_01')"
+                     style="cursor:pointer;">
+
                     <span class="project-id">[ ARCHIVE_01 ]</span>
-                    <h4>Online Consultation Queue</h4>
+
+                    <h4>Online Consultation Queue Management System</h4>
                 </div>
+
                 <div class="card-content">
-                    <p>Advanced Java architecture for real-time queue management. Integrates MySQL for data persistence.</p>
+
+                    <p>
+                        A Java-based consultation queue system designed to
+                        manage patient tickets, consultations, and queue flow.
+                    </p>
+
                     <div class="tags">
-                        <span>Java</span> <span>MySQL</span> <span>Logic</span>
+                        <span>Java</span>
+                        <span>MySQL</span>
+                        <span>Queue Management</span>
                     </div>
-                    <a href="https://github.com/luiskeine/OnlineConsultationQueueSystem" target="_blank" class="link-btn">OPEN_REPOSITORY</a>
+
+                    <a href="https://github.com/luiskeine/OnlineConsultationQueueSystem"
+                       target="_blank"
+                       class="link-btn">
+                        OPEN_REPOSITORY
+                    </a>
+
                 </div>
             </div>
 
-            <!-- Project 2 (Python) -->
+
+            <!-- ARCHIVE 02 -->
             <div class="project-card">
-                <div class="project-viewport" onclick="openProject('archive_02')" style="cursor:pointer;">
-                    <img src="images/organizer_gui.png" alt="Smart File Organizer Preview">
+
+                <div class="project-viewport">
+                    <img src="images/organizer_gui.png" alt="Smart File Organizer">
                 </div>
-                <div class="project-header" onclick="openProject('archive_02')" style="cursor:pointer;">
+
+                <div class="project-header"
+                     onclick="openProject('archive_02')"
+                     style="cursor:pointer;">
+
                     <span class="project-id">[ ARCHIVE_02 ]</span>
+
                     <h4>Smart File Organizer</h4>
                 </div>
+
                 <div class="card-content">
-                    <p>Python-based automation system for directory optimization using OS-level logic.</p>
+
+                    <p>
+                        A Python desktop automation tool that monitors and
+                        organizes files into folders based on file type.
+                    </p>
+
                     <div class="tags">
-                        <span>Python</span> <span>Automation</span> <span>OS</span>
+                        <span>Python</span>
+                        <span>Automation</span>
+                        <span>CustomTkinter</span>
                     </div>
-                    <a href="https://github.com/luiskeine/Smart-File-Organizer.git" target="_blank" class="link-btn">OPEN_REPOSITORY</a>
+
+                    <a href="https://github.com/luiskeine/Smart-File-Organizer.git"
+                       target="_blank"
+                       class="link-btn">
+                        OPEN_REPOSITORY
+                    </a>
+
                 </div>
             </div>
 
-            <!-- Project 3 (AI Placeholder) -->
-            <div class="project-card" style="border-style: dashed; border-color: rgba(16, 185, 129, 0.3);">
-                <div class="project-header" onclick="openProject('archive_03')" style="cursor:pointer;">
-                    <span class="project-id" style="color: #64748b;">[ ARCHIVE_03 ]</span>
-                    <h4 style="color: #64748b;">AI Resume Analyzer</h4>
+
+            <!-- ARCHIVE 03 -->
+            <div class="project-card"
+                 style="border-style: dashed; opacity: 0.7;">
+
+                <div class="project-header"
+                     onclick="openProject('archive_03')"
+                     style="cursor:pointer;">
+
+                    <span class="project-id">[ ARCHIVE_03 ]</span>
+
+                    <h4>AI Resume Analyzer</h4>
                 </div>
+
                 <div class="card-content">
-                    <p style="color: #64748b;">CURRENT_DEV: Implementing NLP logic to parse and match resumes with job descriptions.</p>
+
+                    <p>
+                        A developing AI-based application designed to analyze
+                        resumes against job descriptions using NLP.
+                    </p>
+
                     <div class="tags">
-                        <span style="opacity: 0.5;">AI</span> <span style="opacity: 0.5;">Python</span> <span style="opacity: 0.5;">NLP</span>
+                        <span>Python</span>
+                        <span>Flask</span>
+                        <span>NLP</span>
                     </div>
-                    <a href="javascript:void(0)" onclick="openProject('archive_03')" class="link-btn" style="border-color: #334155; color: #64748b;">VIEW_DEV_LOG</a>
+
+                    <a href="#"
+                       onclick="openProject('archive_03'); return false;"
+                       class="link-btn">
+                        VIEW_DEVELOPMENT_LOG
+                    </a>
+
                 </div>
             </div>
-            
+
+
+            <!-- ARCHIVE 04 - SMARTFIND -->
+            <div class="project-card">
+
+                <div class="project-viewport">
+                    <img src="images/smartfind_dashboard.png"
+                         alt="SmartFind Lost and Found System Dashboard">
+                </div>
+
+                <div class="project-header"
+                     onclick="openProject('archive_04')"
+                     style="cursor:pointer;">
+
+                    <span class="project-id">[ ARCHIVE_04 ]</span>
+
+                    <h4>SmartFind - Lost & Found AI</h4>
+                </div>
+
+                <div class="card-content">
+
+                    <p>
+                        An intelligent lost-and-found system combining object
+                        detection and matching logic to assist in identifying
+                        and matching lost items with found reports.
+                    </p>
+
+                    <div class="tags">
+                        <span>Python</span>
+                        <span>YOLO</span>
+                        <span>Computer Vision</span>
+                        <span>AI Agents</span>
+                    </div>
+
+                    <a href="https://github.com/luiskeine/SmartFind-yolov5-integration"
+                       target="_blank"
+                       class="link-btn">
+                        OPEN_REPOSITORY
+                    </a>
+
+                </div>
+            </div>
+
         </div>
     </section>
-    <!-- TECH STACK -->
-<section id="skills">
-        <h3 class="section-title">Technical Proficiency</h3>
+
+
+    <!-- TECHNICAL SKILLS -->
+    <section id="skills">
+
+        <h2 class="section-title">
+            <span style="color: var(--accent);">></span>
+            TECHNICAL_PROFICIENCY
+        </h2>
+
         <div class="skills-wrapper">
-            <div class="skills-column">
-                <p class="column-label">> LANGUAGES</p>
-                <ul class="skill-list-new">
-                    <li>Java <span class="dim">// Enterprise Logic</span></li>
-                    <li>Python <span class="dim">// Automation & AI</span></li>
-                    <li>SQL <span class="dim">// Data Persistence</span></li>
-                    <li>JavaScript <span class="dim">// Frontend Engine</span></li>
-                </ul>
+
+            <div class="skill-item">
+
+                <span class="skill-category">PROGRAMMING_LANGUAGES</span>
+
+                <div class="skill-list">
+                    <span>Java</span>
+                    <span>Python</span>
+                    <span>SQL</span>
+                    <span>JavaScript</span>
+                </div>
+
             </div>
-            <div class="skills-column">
-                <p class="column-label">> TECHNOLOGIES</p>
-                <ul class="skill-list-new">
-                    <li>MySQL <span class="dim">// Database Mgmt</span></li>
-                    <li>Git <span class="dim">// Version Control</span></li>
-                    <li>Watchdog <span class="dim">// Event Monitoring</span></li>
-                    <li>CustomTkinter <span class="dim">// Modern GUI</span></li>
-                </ul>
+
+            <div class="skill-item">
+
+                <span class="skill-category">TOOLS_AND_TECHNOLOGIES</span>
+
+                <div class="skill-list">
+                    <span>MySQL</span>
+                    <span>Git</span>
+                    <span>Watchdog</span>
+                    <span>CustomTkinter</span>
+                    <span>YOLO</span>
+                </div>
+
             </div>
+
         </div>
     </section>
 
+
+    <!-- FOOTER -->
     <footer>
+
         <div class="footer-content">
-            <p>© 2024 Luis | Software Development // AI // Automation</p>
-            <a href="https://github.com/luiskeine/luis-portfolio" target="_blank" class="source-manifest">
-                > VIEW_SOURCE_CODE
+
+            <p>TERMINAL_SESSION: COMPLETED</p>
+
+            <p>
+                Built by Luis | Software Development & AI
+            </p>
+
+            <a href="https://github.com/luiskeine/luis-portfolio"
+               target="_blank"
+               class="source-manifest">
+                SOURCE_MANIFEST
             </a>
+
         </div>
+
     </footer>
 
-    <!-- SYSTEM MODAL (HIDDEN BY DEFAULT) -->
+
+    <!-- PROJECT MODAL -->
     <div id="project-modal" class="modal">
+
         <div class="modal-nav">
+
             <div class="nav-content">
+
                 <div class="nav-path">
-                    <span class="root">LUIS_DEV /</span>
-                    <span class="current-file"> ARCHIVE_01.sys</span>
+                    <span>ROOT / ARCHIVE /</span>
+                    <span class="current-file">PROJECT.sys</span>
                 </div>
-                <button class="close-btn" onclick="closeProject()">[ ESC ] CLOSE_FILE</button>
+
+                <button class="close-btn" onclick="closeProject()">
+                    [ CLOSE_X ]
+                </button>
+
             </div>
+
         </div>
+
         <div class="modal-content">
             <div id="modal-body"></div>
         </div>
+
     </div>
 
-    <!-- Scripts -->
-    <script src="script.js"></script>
 
-    <!-- Corner System Identity -->
-    <div style="position: fixed; bottom: 20px; left: 20px; font-family: 'Courier New', monospace; font-size: 10px; color: var(--accent); opacity: 0.3; pointer-events: none;">
-    SYS_STATUS: ACTIVE <br>
-    BUILD_VERSION: 3.0
-</div>
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
 
 </body>
 </html>
